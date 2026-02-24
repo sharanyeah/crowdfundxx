@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { connectToDatabase, getDb } from './services/mongodb';
-import path from "path";
+import * as path from "path";
 
 const app = express();
 const port = process.env.PORT || 3001;
