@@ -1,0 +1,8 @@
+
+{
+  "name": "CrowdFundX: Process-First Crowdfunding",
+  "description": "A trust-oriented crowdfunding platform where projects are tracked through milestones, updates, and skill contributions, building institutional memory and verifiable reputation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

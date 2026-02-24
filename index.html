@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdFundX — Institutional Growth Registry</title>
+    <meta name="description" content="A trust-oriented crowdfunding platform where process is the asset. Track milestones, verify skills, and build a lasting reputation.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crowdfundx.dev/">
+    <meta property="og:title" content="CrowdFundX — Fund Ideas. Track Progress. Build Trust.">
+    <meta property="og:description" content="The professional registry for milestone-driven growth. Crowdfunding with memory.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="CrowdFundX — Institutional Growth Registry">
+    <meta property="twitter:description" content="Accountability-first projects backed by verifiable outcomes.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cobalt: '#0047FF',
+                        accent: '#FF3D00',
+                        surface: '#FBFBFD',
+                        border: '#E2E2E7',
+                        ink: '#1D1D1F',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBFBFD;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        .glass-ui {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+        .btn-premium {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-premium:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+        ::selection {
+            background: #0047FF;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
