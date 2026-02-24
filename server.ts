@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { connectToDatabase, getDb } from './services/mongodb';
+import path from "path";
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -775,19 +776,18 @@ app.post('/api/seed', async (req, res) => {
       }
     ];
 
-    import path from "path";
-
-const root = process.cwd();
-
-// serve React build
-app.use(express.static(path.join(root, "dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(root, "dist", "index.html"));
-});
+    
     await db.collection('projects').insertMany(dummyProjects);
     res.json({ success: true, users: 6, projects: 12 });
   } catch (error) {
     res.status(500).json({ error: 'Seed failed' });
   }
+});
+
+const root = process.cwd();
+
+app.use(express.static(path.join(root, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(root, "dist", "index.html"));
 });
