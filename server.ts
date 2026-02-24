@@ -774,6 +774,17 @@ app.post('/api/seed', async (req, res) => {
         solution: 'Low-cost, sustainable experiment kits covering 6th-10th grade syllabus.' 
       }
     ];
+
+    import path from "path";
+
+const root = process.cwd();
+
+// serve React build
+app.use(express.static(path.join(root, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(root, "dist", "index.html"));
+});
     await db.collection('projects').insertMany(dummyProjects);
     res.json({ success: true, users: 6, projects: 12 });
   } catch (error) {
